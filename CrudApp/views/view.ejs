@@ -1,0 +1,12 @@
+<%- include('header.ejs') %>
+    <div class="card">
+        <h1><%= posts.name %></h1>
+        <img src="<%= posts.image %>" alt="">
+        <p><%= posts.age %></p>
+        <form action="/<%= posts._id %>?_method=DELETE" method="post">
+            <button>delete</button>
+        </form>
+        <form action="/edit/<%= posts._id %>" method="get">
+            <button>Edit</button>
+        </form>
+    </div>
